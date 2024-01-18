@@ -13,6 +13,6 @@ export class ProductService {
     return this.http.get<Product[]>('https://localhost:7142/api/Product/GetProducts?CountryCode='+CountryCode);
   }
   getCountry(){
-    return this.http.get<string[]>('https://localhost:7142/api/Product/GetCountry');
+    return this.http.get<string[]>('https://localhost:7142/api/Product/GetCountry'); 
   }
 }
