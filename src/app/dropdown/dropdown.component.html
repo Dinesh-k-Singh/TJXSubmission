@@ -1,0 +1,11 @@
+<label class="col-sm-2">
+    Currency by country
+</label>
+<div class="col-sm-10">
+    <select name = "currency" (change) = "changeCurrency($event)" class = "form-control">
+        <option>--select--</option>
+        <option *ngFor="let country of dropdownList">
+            {{country}}
+        </option>
+    </select>
+</div>

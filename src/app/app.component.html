@@ -1,0 +1,23 @@
+<app-dropdown></app-dropdown>
+<div class = "product-list">
+  <h1>Product List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let item of productList">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.price}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
