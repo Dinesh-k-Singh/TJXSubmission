@@ -2,6 +2,8 @@ import { Component, SimpleChanges } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { Dropdown } from '../Data-type';
 import { CommonModule } from '@angular/common';
+import { AppComponent } from '../app.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dropdown',
@@ -13,11 +15,13 @@ import { CommonModule } from '@angular/common';
 export class DropdownComponent {
   dropdownList:undefined | string[];
   
-  constructor(private productService: ProductService){
+  constructor(private productService: ProductService,private router:Router,private appcom:AppComponent){
 
   }
   changeCurrency(e:any){
-    console.log(e.target.value);
+    this.appcom.loadGrid(e.target.value);
+    
+    
   }
   ngOnInit():void{
     this.productService.getCountry().subscribe((result)=>{

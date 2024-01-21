@@ -33,4 +33,13 @@ export class AppComponent {
   //     }
   //   })
   // }
+
+  loadGrid(data:string){
+    this.productService.getProducts(data).subscribe((result)=>{
+      console.warn(result);
+      if(result){
+        this.productList = result;
+      }
+    })
+  }
 }
